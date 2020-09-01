@@ -1,3 +1,5 @@
+// include this file to add data to browser database
+// the name 'masterDB' is arbitrary
 const dbPromise = createIndexedDB('masterDB');
 
 function createIndexedDB(dbName) {
@@ -16,7 +18,7 @@ function createIndexedDB(dbName) {
 
 
 // add data
-function saveDataLocally(data,dataHandle) {
+function saveDataLocally(data, dataHandle) {
    if (!("indexedDB" in window)) {
       return null;
    }
